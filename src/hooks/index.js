@@ -1,3 +1,3 @@
-import { usePartialPersistentStore } from "./_usePartialPersistentStore";
+import { useApp } from "./_useApp";
 
-export { usePartialPersistentStore };
+export { useApp };

@@ -1,18 +1,16 @@
-import { usePartialPersistentStore } from "./hooks";
+import { useApp } from "./hooks";
 
 export const App = () => {
-  const store = usePartialPersistentStore();
+  const app = useApp();
   return (
     <>
       <p>
         first count does not persist in local storage (will not survive a
         refresh)
       </p>
-      <button onClick={() => store.incrementFirstCount()}>+ first count</button>
-      <button onClick={() => store.incrementSecondCount()}>
-        + second count
-      </button>
-      <pre>{JSON.stringify(store)}</pre>
+      <button onClick={app.incrementCount}>+ first count</button>
+      <button onClick={app.incrementStoredCount}>+ second count</button>
+      <pre>{JSON.stringify(app)}</pre>
     </>
   );
 };
